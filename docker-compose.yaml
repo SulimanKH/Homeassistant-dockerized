@@ -53,4 +53,4 @@ volumes:
     homeassistant-config:
         name: homeassistant-config
     zwave-config:
-        name: zwave-confi
+        name: zwave-config
