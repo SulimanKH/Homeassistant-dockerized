@@ -1,0 +1,84 @@
+# Node.js
+node_modules/
+npm-debug.log
+yarn-debug.log
+yarn-error.log
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+env/
+venv/
+*.egg-info/
+*.egg
+
+# Java
+*.class
+*.jar
+*.war
+*.ear
+*.class
+*.log
+
+# JavaScript/TypeScript
+dist/
+build/
+*.log
+*.tgz
+*.bak
+
+# macOS
+.DS_Store
+
+# Windows
+Thumbs.db
+Desktop.ini
+
+# Linux
+*~
+
+# JetBrains IDEs (IntelliJ, PyCharm, etc.)
+.idea/
+
+# VS Code
+.vscode/
+
+# Log files
+*.log
+
+# Dependency directories
+/coverage
+/test-results
+
+# .env files (for sensitive information)
+.env
+
+# Docker
+.docker/
+docker-compose.override.yml
+
+# Kubernetes
+.kube/
+
+# Build directories
+/dist/
+/build/
+
+# Archives
+*.tar.gz
+*.zip
+
+# Ignore sensitive data files
+*.key
+*.pem
+*.p12
+
+# Git history
+.git/
+
+# Temporary files
+*.swp
+*~
