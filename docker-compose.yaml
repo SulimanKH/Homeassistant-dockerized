@@ -1,6 +1,7 @@
 version: '3.9'
 
 services:
+
   portainer:
     container_name: portainer
     image: portainer/portainer-ce
@@ -12,17 +13,19 @@ services:
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
       - ./portainer:/data
+
   homeassistant:
     container_name: homeassistant
     image: "ghcr.io/home-assistant/home-assistant:stable"
     ports:    
       - "8123:8123"
     volumes:
-      - ./homeassitant/config:/config
+      - homeassistant-config:/config
       - /etc/localtime:/etc/localtime:ro
       - /run/dbus:/run/dbus:ro
     restart: unless-stopped
     privileged: true
+
   zwave-js-ui:
     container_name: zwave-js-ui
     image: zwavejs/zwave-js-ui:latest
@@ -41,7 +44,13 @@ services:
       #- '/dev/serial/by-id/<REPLACE WITH YOUR STICK REFERENCE>:/dev/zwave'
       - ${ZWAVE_STICK_PATH}:/dev/zwave
     volumes:
-      - ./z-wave-js/:/usr/src/app/store
+      - zwave-config:/usr/src/app/store
     ports:
       - "8091:8091" # port for web interface
       - "3000:3000" # port for Z-Wave JS websocket server
+
+volumes:
+    homeassistant-config:
+        name: homeassistant-config
+    zwave-config:
+        name: zwave-confi
