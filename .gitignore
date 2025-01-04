@@ -82,3 +82,7 @@ docker-compose.override.yml
 # Temporary files
 *.swp
 *~
+
+# Homeassitant
+homeassitant
+portainer
