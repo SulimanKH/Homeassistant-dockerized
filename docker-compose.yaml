@@ -12,7 +12,7 @@ services:
       - TZ=Europe/London
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
-      - ./portainer:/data
+      - portainer-data:/data
 
   homeassistant:
     container_name: homeassistant
@@ -60,3 +60,5 @@ volumes:
         name: homeassistant-config
     zwave-config:
         name: zwave-config
+    portainer-data:
+        name: portainer-data
