@@ -43,7 +43,6 @@ services:
       # Instead, use the /dev/serial/by-id/X serial device for your Z-Wave stick.
       #- '/dev/serial/by-id/<REPLACE WITH YOUR STICK REFERENCE>:/dev/zwave'
       - ${ZWAVE_STICK_PATH}:/dev/zwave
-    privileged: true
     healthcheck:
       test: 'wget --no-verbose --spider --no-check-certificate --header "Accept: text/plain" https://localhost:8091/health || exit 1'
       interval: 1m
